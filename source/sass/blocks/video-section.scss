@@ -1,0 +1,133 @@
+.video-section {
+  position: relative;
+  width: 100%;
+  max-width: 1448px;
+  margin: 0 auto;
+  margin-bottom: 105px;
+  padding: 70px 138px;
+  background-color: #f9f9f9;
+}
+
+.video-section__title {
+  @include font(36, 43);
+  margin: 0;
+  margin-bottom: 60px;
+  font-family: "SF Pro Display", "Arial", sans-serif;
+  font-weight: normal;
+  color: #222222;
+}
+
+.video-section__slider-container {
+  overflow: hidden;
+}
+
+.video-section__slider-controls {
+  position: absolute;
+  right: 140px;
+  top: 70px;
+  display: flex;
+}
+
+.video-section__slider-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e5e5e5;
+
+  &.swiper-button-disabled {
+    svg {
+      fill: rgba(77, 77, 77, 0.5);
+    }
+  }
+
+  &--prev {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  &--next {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+  svg {
+    fill: #4d4d4d
+  }
+}
+
+.video-section__slider {
+  @include list-reset;
+  display: flex;
+}
+
+.video-section__slide {
+  flex-shrink: 0;
+  width: 21.3%;
+
+  iframe {
+    width: 100%;
+    height: 306px;
+  }
+}
+
+@media (max-width: $desktop-width - 1) {
+  .video-section {
+    padding: 70px 50px;
+  }
+
+  .video-section__slider-controls {
+    right: 50px;
+  }
+}
+
+@media (max-width: $desktop-min-width - 1) {
+  .video-section {
+    padding: 35px 30px;
+  }
+
+  .video-section__title {
+    @include font(32, 38);
+  }
+
+  .video-section__slider-controls {
+    right: 30px;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .video-section {
+    margin-bottom: 50px;
+    padding: 30px 20px;
+  }
+
+  .video-section__title {
+    @include font(24, 28);
+    margin-bottom: 40px;
+  }
+
+  .video-section__slider-controls {
+    right: 20px;
+    top: 55px;
+  }
+
+  .video-section__slider-btn {
+    width: 30px;
+    height: 30px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  iframe {
+    height: auto;
+  }
+}

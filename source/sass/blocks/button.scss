@@ -1,0 +1,16 @@
+.button {
+  @include button-reset;
+  @include not-hover;
+  min-width: 160px;
+  box-sizing: border-box;
+  color: #ffffff;
+  background-color: $red-color;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover {
+    @include hover;
+    background-color: rgba(210, 0, 28, 0.7);
+  }
+}

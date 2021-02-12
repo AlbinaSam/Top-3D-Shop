@@ -1,0 +1,28 @@
+.messendger-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.messendger-list__item {
+  margin-right: 19px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    @include not-hover;
+
+    svg path {
+      @include not-hover;
+      fill: #000000;
+    }
+
+    &:hover {
+      @include hover;
+      fill: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
