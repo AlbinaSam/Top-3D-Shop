@@ -57,6 +57,16 @@
   }
 }
 
+@media (max-width: $desktop-min-width - 1) {
+  .bottom-nav__item {
+    a {
+      &:hover {
+        color: #000000;
+      }
+    }
+  }
+}
+
 @media (max-width: 900px) {
 
   .bottom-nav__list {

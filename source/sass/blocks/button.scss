@@ -14,3 +14,11 @@
     background-color: rgba(210, 0, 28, 0.7);
   }
 }
+
+@media (max-width: $desktop-min-width - 1) {
+  .button {
+    &:hover {
+      background-color: $red-color;
+    }
+  }
+}

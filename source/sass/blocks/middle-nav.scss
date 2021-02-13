@@ -32,6 +32,16 @@
   }
 }
 
+@media (max-width: $desktop-min-width - 1) {
+  .middle-nav__item {
+    a {
+      &:hover {
+        color: #000000;
+      }
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .middle-nav {
     position: fixed;

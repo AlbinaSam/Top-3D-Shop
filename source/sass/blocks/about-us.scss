@@ -99,6 +99,7 @@
     }
 
     a {
+      @include not-hover;
       position: relative;
       color: $red-color;
       text-decoration: none;
@@ -112,14 +113,38 @@
         height: 1px;
         background-color: $red-color;
       }
+
+      &:hover {
+        @include hover;
+        color: rgba(210, 0, 28, 0.7);
+
+        &::after {
+          background-color: rgba(210, 0, 28, 0.7);
+        }
+      }
     }
   }
 }
 
-@media (max-width: $desktop-width - 1) {
+@media (max-width: $desktop-min-width - 1) {
   .about-us__photo {
     height: 346px;
   }
+  .about-us__text {
+    p {
+      a {
+        &:hover {
+          @include hover;
+          color: $red-color;
+
+          &::after {
+            background-color: $red-color;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 @media (max-width: 900px) {

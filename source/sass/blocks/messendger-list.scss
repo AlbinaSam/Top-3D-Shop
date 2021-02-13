@@ -26,3 +26,13 @@
     }
   }
 }
+
+@media (max-width: $desktop-min-width - 1) {
+  .messendger-list__item {
+    a {
+      &:hover {
+        fill: #000000;
+      }
+    }
+  }
+}

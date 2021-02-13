@@ -94,6 +94,12 @@
 
   .see-about-us__link {
     @include font(14, 18);
+
+    a {
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
 
